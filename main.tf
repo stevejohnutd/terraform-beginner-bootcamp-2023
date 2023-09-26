@@ -1,33 +1,4 @@
-# This is is my 1st change
-
-terraform {
-  cloud {
-    organization = "SteveJohn"
-
-    workspaces {
-      name = "terra-house-1"
-    }
-  }
-  required_providers {
-    random = {
-      source = "hashicorp/random" #Provider
-      version = "3.5.1"
-    }
-    aws = {
-      source = "hashicorp/aws"
-      version = "5.16.2"
-    }
-  }
-}
-
-provider "aws" {
-  # Configuration options
-}
-
-provider "random" {
-  # Configuration options
-}
-
+#https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string.html
 resource "random_string" "bucket_name" {
   lower = true
   upper = false
@@ -40,8 +11,9 @@ resource "aws_s3_bucket" "example" {
   # Bucket Naming Rules
   # https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html
   bucket = random_string.bucket_name.result
+
+  tags = { 
+    UserUuid = var.user_uuid
+  }
 }
 
-output "random_bucket_name"{
-    value = random_string.bucket_name.result
-}
