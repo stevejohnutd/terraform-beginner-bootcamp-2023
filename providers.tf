@@ -9,10 +9,11 @@ terraform {
   #   }
   # }
   required_providers {
-    random = {
-      source = "hashicorp/random" #Provider
-      version = "3.5.1"
-    }
+    # 9/26/2023 - No longer need random as the import does not reflect on state file
+    # random = {
+    #   source = "hashicorp/random" #Provider
+    #   version = "3.5.1"
+    # }
     aws = {
       source = "hashicorp/aws"
       version = "5.16.2"
