@@ -1,16 +1,16 @@
 @font-face {
   font-family: Dune;
-  src: url(Dune_Rise.OTF);
+  src: url("Dune_Rise.OTF");
 }
 
 @font-face {
   font-family: Rajdhani;
-  src: url(Rajdhani.TTF);
+  src: url("Rajdhani.TTF");
 }
 
 @font-face {
   font-family: RajdhaniB;
-  src: url(Rajdhani-Bold.TTF);
+  src: url("Rajdhani-Bold.TTF");
 }
 body, html {
   height: 100%;
