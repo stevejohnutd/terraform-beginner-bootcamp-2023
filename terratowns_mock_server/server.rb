@@ -71,7 +71,7 @@ class TerraTownsMockServer < Sinatra::Base
     end
   end
 
-  # return a harcoded access token
+  # return a hardcoded access token
   def x_access_code
     return '9b49b3fb-b8e9-483c-b703-97ba88eef8e0'
   end
