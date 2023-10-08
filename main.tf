@@ -36,7 +36,7 @@ most valuable asset while its heir becomes troubled by visions of a dark future.
 DESCRIPTION
   domain_name = module.home_dune_hosting.domain_name
   #domain_name = "3fdq3gz.cloudfront.net"
-  town = "missingo"
+  town = "video-valley"
   content_version = var.dune.content_version
 }
 
